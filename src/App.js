@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 
-class App extends Component {
-  render() {
+const App = function app() {
     return (
       <div className="App">
           <div>
@@ -9,7 +8,6 @@ class App extends Component {
           </div>
       </div>
     );
-  }
-}
+};
 
 export default App;
