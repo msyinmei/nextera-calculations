@@ -1,10 +1,12 @@
 import React from "react";
+import Dashboard from '../components/Dashboard.js';
 
-const App = function app() {
+const App = function () {
     return (
       <div className="App">
           <div>
-          <h1>NextEra Calculations Dashboard</h1>
+          <h1>NextEra Calculations</h1>
+          <Dashboard />
           </div>
       </div>
     );
