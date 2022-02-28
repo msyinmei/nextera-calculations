@@ -9,7 +9,7 @@ test('renders title', () => {
   expect(linkElement).toBeInTheDocument();
 });
 
-test('has dashboard', () => {
+test('renders dashboard', () => {
   render(<App />);
   const linkElement = screen.getByText("Dashboard");
   expect(linkElement).toBeInTheDocument();
