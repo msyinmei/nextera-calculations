@@ -67,6 +67,8 @@ const Dashboard = function () {
       return <div>Loading...</div>;
     } else {
       const columnNames = ["Started At", "Cancelled At", "% Completed", "bar", "baz", "foo", "value", "values/sec"];
+      // const sortedItems = items.sort((a,b) => b.started_at - a.started_at);
+      const sortedItems = items;
 
       return (
         <DashboardContainer>
@@ -77,7 +79,7 @@ const Dashboard = function () {
               ))}
               </DashboardRow>
 
-            {items.map(item => (
+            {sortedItems.map(item => (
                 <DashboardRow  key={item.id}>
                   <RowItem> {item.started_at} </RowItem>
                   <RowItem> {item.cancelled_at} </RowItem>
