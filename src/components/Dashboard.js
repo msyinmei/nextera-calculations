@@ -1,4 +1,25 @@
 import React, { useState, useEffect } from "react";
+import styled from '@emotion/styled';
+
+const DashboardContainer = styled.div({ 
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flexstart',
+});
+
+const DashboardRow = styled.div({
+    display: 'flex',
+    flexDirection: 'row',
+})
+
+const RowItem = styled.div({
+    display: 'flex',
+    padding: '32px',
+    margin: '10px',
+    backgroundColor: '#CCFFFF',
+    borderRadius: '4px',
+    fontSize: '12px'
+})
 
 const Dashboard = function () {
     const [error, setError] = useState(null);
@@ -32,17 +53,15 @@ const Dashboard = function () {
       return <div>Loading...</div>;
     } else {
       return (
-        <div className="Dashboard">
-            <div>
-            <h1>Dashboard</h1>
+        <DashboardContainer>
+          <h1>Dashboard</h1>
             {items.map(item => (
-                <div key={item.id}>
-                    <div> "started" {item.started_at} </div>
-                    <div> "cancelled" {item.cancelled_at} </div>
-                </div>
-            ))}
-            </div>
-        </div>
+                <DashboardRow  key={item.id}>
+                  <RowItem> "time started" {item.started_at} </RowItem>
+                  <RowItem> "time cancelled" {item.cancelled_at} </RowItem>
+                </DashboardRow>
+            ))};
+        </DashboardContainer>
       );
     }
 };
