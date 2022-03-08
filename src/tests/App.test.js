@@ -5,12 +5,6 @@ import App from '../components/App.js';
 
 test('renders title', () => {
   render(<App />);
-  const linkElement = screen.getByText("NextEra Calculations");
-  expect(linkElement).toBeInTheDocument();
+  const headerElement = screen.getByText("NextEra Calculations");
+  expect(headerElement).toBeInTheDocument();
 });
-
-test('renders dashboard', () => {
-  render(<App />);
-  const linkElement = screen.getByText("Dashboard");
-  expect(linkElement).toBeInTheDocument();
-})

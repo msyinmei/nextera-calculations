@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from '../components/Login.js';
 import Dashboard from '../components/Dashboard.js';
 import styled from '@emotion/styled';
@@ -22,6 +22,7 @@ const isLoggedIn = () => {
 
 const App = function () {
   return (
+  <BrowserRouter>
     <AppContainer>
       <AppHeader>
         NextEra Calculations
@@ -31,6 +32,7 @@ const App = function () {
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </AppContainer>
+  </BrowserRouter>
     );
 };
 
