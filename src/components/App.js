@@ -1,14 +1,36 @@
 import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Login from '../components/Login.js';
 import Dashboard from '../components/Dashboard.js';
+import styled from '@emotion/styled';
+
+const AppContainer = styled.div({
+  display: 'flex',
+  flexDirection: 'column',
+});
+
+const AppHeader = styled.h1({
+  display: 'flex',
+  alignSelf: 'center'
+});
+
+const isLoggedIn = () => {
+  const token = localStorage.getItem('x-auth')
+  //return if else
+  return false;
+}
 
 const App = function () {
-    return (
-      <div className="App">
-          <div>
-          <h1>NextEra Calculations</h1>
-          <Dashboard />
-          </div>
-      </div>
+  return (
+    <AppContainer>
+      <AppHeader>
+        NextEra Calculations
+      </AppHeader>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
+    </AppContainer>
     );
 };
 

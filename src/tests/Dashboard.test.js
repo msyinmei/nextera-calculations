@@ -5,6 +5,6 @@ import Dashboard from '../components/Dashboard.js';
 
 test('renders title of dashboard', async () => {
   render(<Dashboard />);
-  const linkElement = await findByText("Dashboard");
+  const linkElement = findByText("Dashboard");
   expect(linkElement).toBeInTheDocument();
 });
