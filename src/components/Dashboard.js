@@ -22,6 +22,9 @@ const RowItem = styled.div({
   borderRadius: '4px',
 })
 
+//setTimeout vs setInterval
+//use SWR library
+
 const Dashboard = function () {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);

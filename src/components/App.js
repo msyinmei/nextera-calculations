@@ -22,7 +22,6 @@ const isLoggedIn = () => {
 
 const App = function () {
   return (
-  <BrowserRouter>
     <AppContainer>
       <AppHeader>
         NextEra Calculations
@@ -32,7 +31,6 @@ const App = function () {
         <Route path="/dashboard" element={<Dashboard />} />
       </Routes>
     </AppContainer>
-  </BrowserRouter>
     );
 };
 

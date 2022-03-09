@@ -38,6 +38,8 @@ const Login = () => {
 
   const handleSubmit = (props) => {
     console.log(props);
+    //make request to api
+    //localStorage.setItem("key","value") to save the token, convert to JSON with useEffect
   }
 
   // if (isLoggedIn) {
